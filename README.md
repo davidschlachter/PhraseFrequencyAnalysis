@@ -4,7 +4,8 @@ Taking as input a relatively large body of text, analyze frequency of ordered ph
 Considerations:
 -weights are assigned based on ordered word pairs
 -punctuation are terminators
--ignore proper nouns
+---Potential pre-processing option: line break on whitespace.
+- Be case-insensitive in intial versions
 
 -MAKE SURE THERE ARE NO CYCLES
 
