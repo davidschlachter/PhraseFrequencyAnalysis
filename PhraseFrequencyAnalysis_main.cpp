@@ -29,18 +29,25 @@ int main(int argc, char *argv[]){
         cout << "Output file opened successfully" << endl;
 
 
-    Graph<string> test2;
+    Graph<string> test;
     char currentStr[256];
     int counter=0, edgeCounter=0;
 
+
+    //////////////////////////////////////
+    //  START Running time analysis   ////
+    //////////////////////////////////////
     time_t rawtime;
     clock_t t;
     t = clock();
     struct tm * timeinfo;
-
     time (&rawtime);
     timeinfo = localtime (&rawtime);
     printf("Starting program run at: %s", asctime(timeinfo));
+    //////////////////////////////////////
+    //  END Running time analysis   //////
+    //////////////////////////////////////
+
 
     while(!instream.eof()){
         instream.getline(currentStr,256); //retrieves c-string object
@@ -52,34 +59,26 @@ int main(int argc, char *argv[]){
         }
 
         prevString = currentString;
-        test2.addVertex(currentString);
+        test.addVertex(currentString);
         counter++;
         if(prevString != ""){
-            test2.addEdge(prevString, currentString);
+            test.addEdge(prevString, currentString);
             edgeCounter++;
         }
     }
-    time (&rawtime);
-    timeinfo = localtime (&rawtime);
 
-    t= clock()-t;
-    printf("Program finished at:     %s", asctime(timeinfo));
-    printf("It took me %d clicks (%f seconds).\n", t, ((float)t)/CLOCKS_PER_SEC);
-    cout << "# of vertices examined: " << counter << "  # of edges: " << edgeCounter << endl;
-    cout << "# of vertices in graph: " << test2.getNumberVertices()<<endl;
 
-/**
     // DEFINE THE START AND END POINTS
-    string startVertex = "the";
-    string destiVertex = "person";
+/**
+
+    string startVertex = "they";
+    string destiVertex = "a";
 
 
     cout << "Paths from \'" << startVertex
          << "\' to \'"<< destiVertex << "\'" << endl;
-    cout << "BFS: "; BFS(test,startVertex,destiVertex);
     cout << "DFS: "; DFS(test,startVertex,destiVertex);
     cout << endl;
-
     vector<vector<string> > paths;
     getPaths(test,startVertex,destiVertex, paths);
 
@@ -101,5 +100,19 @@ int main(int argc, char *argv[]){
 
     cout << endl << endl;
 */
+
+
+
+    //////////////////////////////////////
+    //   Running time analysis   /////////
+    //////////////////////////////////////
+    time (&rawtime);
+    timeinfo = localtime (&rawtime);
+    t= clock()-t;
+    printf("Program finished at:     %s", asctime(timeinfo));
+    printf("It took me %d clicks (%f seconds).\n", t, ((float)t)/CLOCKS_PER_SEC);
+    cout << "# of vertices examined: " << counter << "  # of edges: " << edgeCounter << endl;
+    cout << "# of vertices in graph: " << test.getNumberVertices()<<endl;
+
     return EXIT_SUCCESS;
 }
