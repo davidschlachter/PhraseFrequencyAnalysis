@@ -1,14 +1,9 @@
 # PhraseFrequencyAnalysis
-Taking as input a relatively large body of text, analyze frequency of ordered phrases (ranked within categories based on number of words per phrase), i.e. most common 3 word phrase vs. most common 4 word phrase, etc.
+Taking as input a basic text file, analyze frequency of ordered phrases (ranked based on number of words per phrase), i.e. most common 3 word phrase
 
-Considerations:
--weights are assigned based on ordered word pairs
--punctuation are terminators
----Potential pre-processing option: line break on whitespace.
-- Be case-insensitive in intial versions
-
--MAKE SURE THERE ARE NO CYCLES
-
-post-processing:
-?-dynamically sort the edges based on number of edges (ie, heaviest 3 term phrase), as terms are added to graph
-?-statically sort them in buckets (ie. 0-10 weight, 11-20 weight)
+Future development suggestions:
+1) Add HTML parsing for analyzing displayed text on webpages
+2) Add comparison option/parameter for arbitrary phrase length comparisons, ex. compare the most common 3-word phrase against most common 4-word phrase, in the same file
+3) Add comparison functionality between files, ie. most common 3-word phrases from each of two (or more files)
+4) Combine features (2) and (3): Advanced interfile comparisons
+5) Advanced linguistic parsing to ignore extremely common words, ex. "the", "a", "it's", to allow for more advanced farming of significant phrases
