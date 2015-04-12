@@ -1,0 +1,36 @@
+Owner@D-COMP /cygdrive/c/Users/Owner/David/myfiles/GitRepository
+$ python PhraseFreqAnalysis.py PrideAndPrejudice.txt 3
+Number of words counted: 118161
+Printing shortlist of top 10 most common phrases in text file:
+---PrideAndPrejudice.txt---
+
+FREQ. | PHRASE
+47      as soon as
+43      she could not
+36      that he had
+34      in the world
+31      it would be
+30      could not be
+28      that it was
+28      on the subject
+27      as well as
+27      would have been
+
+Owner@D-COMP /cygdrive/c/Users/Owner/David/myfiles/GitRepository
+$ python PhraseFreqAnalysis.py WhereAngelsFearToTread.txt 3
+Number of words counted: 48398
+Printing shortlist of top 10 most common phrases in text file:
+---WhereAngelsFearToTread.txt---
+
+FREQ. | PHRASE
+23      said Miss Abbott
+23      out of the
+17      that he was
+16      one of the
+15      he did not
+14      at all events
+14      said Mrs Herriton
+14      that she was
+13      that she had
+12      as well as
+
