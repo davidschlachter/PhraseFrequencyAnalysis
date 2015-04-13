@@ -25,22 +25,20 @@ def make_frequency_dict(input_list):
             my_dict[item] += 1
     return my_dict
 
-###
-#Comments between the "###" lines are for program usage reference
-# sys.argv[0] is program running
-# sys.argv[1] is source text file
-sourcefilename = sys.argv[1]
-# sys.argv[2] number of words per phrase
-len_of_phrase = sys.argv[2]
-###
-
 # Runtime error checking on the commmand line for parameter completeness
 # DEVNOTE: may consider more intelligent argument parsing, ie. int vs text
 #          or bad ordered args, ie. prgmname int filename == BAD!!!!
 #                       instead of  prmgname filename int == GOOD!!!
-if len(sys.argv)< 2:
-    print "Error: usage\n python prog_name source_txt words_per_phrase"
+if len(sys.argv)<= 2:
+    print "Error: usage\n>>python prog_name.py source_txt.txt words_per_phrase"
     exit(1)
+
+###
+#Comments between the "###" lines are for program usage reference
+# sys.argv[0] is program running
+sourcefilename = sys.argv[1]  # sys.argv[1] is source text file
+len_of_phrase = sys.argv[2]   # sys.argv[2] number of words per phrase
+###
 
 # opens and reads a text file and extract all "words"
 ## a "word" is defined here as any consecutive sequence of letters (including
