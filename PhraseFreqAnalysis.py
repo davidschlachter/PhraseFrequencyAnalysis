@@ -29,7 +29,9 @@ def make_frequency_dict(input_list):
 #Comments between the "###" lines are for program usage reference
 # sys.argv[0] is program running
 # sys.argv[1] is source text file
+sourcefilename = sys.argv[1]
 # sys.argv[2] number of words per phrase
+len_of_phrase = sys.argv[2]
 ###
 
 # Runtime error checking on the commmand line for parameter completeness
@@ -45,13 +47,12 @@ if len(sys.argv)< 2:
 ##     contractions) delimited by non-alpha characters (excluding
 ##     apostrophe/single quotation marks, ex. "'")
 pattern = re.compile(r'[\w]+\'?[\w]+')
-with open(sys.argv[1], "r") as source_file:
+with open(sourcefilename, "r") as source_file:
     line_read = source_file.read()
     low = re.findall(pattern, line_read)
 print "Number of words counted: "+str(len(low))
 
-
-zipped_list = find_ngrams(low, int(sys.argv[2]))
+zipped_list = find_ngrams(low, int(len_of_phrase))
 dictionary = make_frequency_dict(zipped_list)
 
 # sort the keys of the dictionary based on their values
@@ -64,13 +65,13 @@ for k in sorted_keys:
 
 # Printing the shortlist of common phrases from 'dictionary' that are
 #      (runtime parameter #2) words long
-shortlist_len = 10  # arbitrary length of shortlist
+shortlist_len = 10  # arbitrary length of shortlist (later versions may   \
+                    #   make this a runtime parameter)
 print "Printing shortlist of top "+str(shortlist_len)+" most common phrases "\
-      "in text file:\n---"+sys.argv[1]+"-"*3
+      "in text file:\n---"+str(sourcefilename)+"-"*3
 print "\nFREQ. | PHRASE"
 for i in range(0,shortlist_len):
     print sorted_list[i][1]," "*4,
-    for x in range(0,3):
+    for x in range(0,int(len_of_phrase)):
         print sorted_list[i][0][x],
     print
-        
