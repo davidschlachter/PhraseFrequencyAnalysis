@@ -34,3 +34,19 @@ FREQ. | PHRASE
 13      that she had
 12      as well as
 
+$ python PhraseFreqAnalysis.py LesMiserables.txt 3
+Number of words counted: 547286
+Printing shortlist of top 10 most common phrases in text file:
+---LesMiserables.txt---
+
+FREQ. | PHRASE
+186      which he had
+165      that he was
+164      one of the
+159      the Rue de
+148      in the Rue
+140      that he had
+131      of the Rue
+122      that is to
+120      in order to
+120      he did not
