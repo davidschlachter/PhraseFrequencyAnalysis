@@ -46,7 +46,7 @@ len_of_phrase = sys.argv[2]   # sys.argv[2] number of words per phrase
 ## a "word" is defined here as any consecutive sequence of letters (including
 ##     contractions) delimited by non-alpha characters (excluding
 ##     apostrophe/single quotation marks, ex. "'")
-pattern = re.compile(r'[\w]+\'?[\w]+')
+pattern = re.compile(r'[\w]+\'?[\w]+', re.UNICODE)
 with open(sourcefilename, "r") as source_file:
     line_read = source_file.read()
     low = re.findall(pattern, line_read)
