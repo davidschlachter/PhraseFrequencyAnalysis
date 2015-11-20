@@ -1,4 +1,7 @@
 # PhraseFrequencyAnalysis
+
+Usage: python3 PhraseFreqAnalysis.py [Input text file] [length of phrase, e.g. 3]
+
 Taking as input a basic text file, analyze frequency of ordered phrases (ranked based on number of words per phrase), i.e. most common 3 word phrase
 
 Future development suggestions:

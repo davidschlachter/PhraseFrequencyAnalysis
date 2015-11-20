@@ -1,4 +1,4 @@
-$ python PhraseFreqAnalysis.py PrideAndPrejudice.txt 3
+$ python3 PhraseFreqAnalysis.py PrideAndPrejudice.txt 3
 Number of words counted: 118161
 Printing shortlist of top 10 most common phrases in text file:
 ---PrideAndPrejudice.txt---
@@ -15,7 +15,7 @@ FREQ. | PHRASE
 27      as well as
 27      would have been
 
-$ python PhraseFreqAnalysis.py WhereAngelsFearToTread.txt 3
+$ python3 PhraseFreqAnalysis.py WhereAngelsFearToTread.txt 3
 Number of words counted: 48398
 Printing shortlist of top 10 most common phrases in text file:
 ---WhereAngelsFearToTread.txt---
@@ -32,7 +32,7 @@ FREQ. | PHRASE
 13      that she had
 12      as well as
 
-$ python PhraseFreqAnalysis.py LesMiserables.txt 3
+$ python3 PhraseFreqAnalysis.py LesMiserables.txt 3
 Number of words counted: 547286
 Printing shortlist of top 10 most common phrases in text file:
 ---LesMiserables.txt---
@@ -49,7 +49,7 @@ FREQ. | PHRASE
 120      in order to
 120      he did not
 
-$ python PhraseFreqAnalysis.py LesMiserables.txt 2
+$ python3 PhraseFreqAnalysis.py LesMiserables.txt 2
 Number of words counted: 547286
 Printing shortlist of top 10 most common phrases in text file:
 ---LesMiserables.txt---
@@ -66,7 +66,7 @@ FREQ. | PHRASE
 811      from the
 785      to be
 
-$ python PhraseFreqAnalysis.py LesMiserables.txt 1
+$ python3 PhraseFreqAnalysis.py LesMiserables.txt 1
 Number of words counted: 547286
 Printing shortlist of top 10 most common phrases in text file:
 ---LesMiserables.txt---
